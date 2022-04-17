@@ -41,16 +41,32 @@ function up() {
 	img.src = 'media/sora_1.png';
 }
 
-function increaseScore(){
+function increaseScore() {
     userScore++;
     totalScore++;
+	updateDisplay();
+}
+
+function updateDisplay() {
     textScoreDisplay.innerHTML = userScore;
     userScoreDisplay.innerHTML = userScore;
     totalScoreDisplay.innerHTML = totalScore;
 }
 
+function readStorage() {
+	if (localStorage.getItem('userScore')) {
+		userScore = localStorage.getItem('userScore');
+		totalScore += parseFloat(userScore, 10);
+		updateDisplay();
+	}
+}
+
+function writeStorage() {
+	localStorage.setItem('userScore', userScore);
+}
+
 // event
-img.addEventListener("mousedown", e => {
+img.addEventListener('mousedown', e => {
 	e.preventDefault();
 	down();
 });
@@ -69,5 +85,9 @@ img.addEventListener("touchend", e => {
 	e.preventDefault();
 	up();
 });
+
+window.addEventListener("load", readStorage);
+
+window.addEventListener("pagehide", writeStorage);
 
 
