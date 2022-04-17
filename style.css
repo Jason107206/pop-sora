@@ -3,6 +3,15 @@
 html, body {
 	width: 100%;
 	height: 100%;
+	
+	overflow-y: visible;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 body {
@@ -13,13 +22,9 @@ body {
     font-family: Nunito, sans-serif;
 }
 
-.noSelect {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+.font {
+    -webkit-text-stroke: 2px black;
+    color: white;
 }
 
 .container {
@@ -27,31 +32,31 @@ body {
 	width: 100%;
 	
 	justify-content: center;
-	align-items: center;
+	align-items: center !important;
 }
 
 .text {
 	flex-direction: column;
 	
-	min-height: 96px;
-	height: 25%;
+	min-height: 143px;
+	height: 20%;
 }
 
 .img {
 	min-height: 400px;
-	height: 65%;
+	height: 60%;
 }
 
 .score {
-	min-height: 65px;
-	height: 10%;
+	min-height: 101px;
+	height: 20%;
 }
 
 .scoreItem {
 	display: flex;
 	align-items: center;
 	
-	margin-right: 8px;
+	margin: 42px 0 24px 0;
 	padding: 0 0 0 0;
 	
 	width: 150px;
@@ -65,9 +70,8 @@ body {
 	font-size: 15px;
 }
 
-.font {
-    -webkit-text-stroke: 2px black;
-    color: white;
+.userScore {
+	margin-right: 8px;
 }
 
 .textTitle {
@@ -87,22 +91,26 @@ body {
 
 @media only screen and (max-width: 475px) {
 	.img {
-		height: 60%;
 		min-height: 300px;
 	}
 	
 	.score {
 		flex-direction: column;
+		justify-content: flex-end !important;
 		
-		height: 15%;
-		min-height: 108px;
+		min-height: 150px;
 	}
 	
-	.scoreItem {
-		margin-right: 0px;
-		margin-bottom: 8px;
-		
+	.scoreItem {		
 		font-size: 14px;
+	}
+	
+	.userScore {
+		margin: 42px 0 8px 0;	
+	}
+	
+	.totalScore {
+		margin: 0 0 24px 0;
 	}
   
 	.textTitle {
