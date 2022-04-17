@@ -1,30 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
 
 html, body {
-	width: 100%;
-	height: 100%;
-	
-	overflow-y: visible;
-	
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	
+	width: 100%;
+	height: 100%;
+	
+	overflow-y: visible;
 }
 
 body {
 	margin: 0;
 	padding: 0;
 	
-    background: linear-gradient(to right, #ffefba, #ffffff);
+    background: linear-gradient(to right, rgb(245, 205, 214), rgb(255, 244, 248));
     font-family: Nunito, sans-serif;
 }
 
 .font {
-    -webkit-text-stroke: 2px black;
     color: white;
+    -webkit-text-stroke: 2px black;
 }
 
 .container {
@@ -35,11 +35,11 @@ body {
 	align-items: center !important;
 }
 
-.text {
-	flex-direction: column;
-	
+.text {	
 	min-height: 143px;
 	height: 20%;
+	
+	flex-direction: column;
 }
 
 .img {
@@ -59,19 +59,20 @@ body {
 	margin: 42px 0 24px 0;
 	padding: 0 0 0 0;
 	
-	width: 150px;
+	width: 170px;
 	height: 35px;
 	
-	border: 1px solid black;
-	border-radius: 35px;
 	background-color: white;
+	
+	border: 2px solid black;
+	border-radius: 35px;
     box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
 	
 	font-size: 15px;
 }
 
 .userScore {
-	margin-right: 8px;
+	margin-right: 40px;
 }
 
 .textTitle {
@@ -163,6 +164,8 @@ body {
 	
 	.scoreItem {
 		width: 130px;
+		
+		font-size: 12px;
 	}
 	
 	#pop {
