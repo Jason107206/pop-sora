@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	
+    background: linear-gradient(to right, #ffefba, #ffffff);
+    font-family: Nunito, sans-serif;
+}
+
+.container {
+	display: flex;	
+	width: 100%;
+	
+	justify-content: center;
+	align-items: center;
+}
+
+.text {
+	flex-direction: column;
+	
+	min-height: 96px;
+	height: 25%;
+}
+
+.img {
+	min-height: 400px;
+	height: 65%;
+}
+
+.score {
+	min-height: 65px;
+	height: 10%;
+}
+
+.scoreItem {
+	display: flex;
+	align-items: center;
+	
+	margin-right: 8px;
+	padding: 0 0 0 0;
+	
+	width: 150px;
+	height: 35px;
+	
+	border: 1px solid black;
+	border-radius: 35px;
+	background-color: white;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+	
+	font-size: 15px;
+}
+
+.font {
+    -webkit-text-stroke: 2px black;
+    color: white;
+}
+
+.textTitle {
+    margin: 24px 0 0 0;
+    font-size: 72px;
+}
+
+.textScore {
+    margin: -12px 0 0 0;
+    font-size: 36px;
+}
+
+#pop {
+	width: 400px;
+	height: 400px;
+}
+
+@media only screen and (max-width: 475px) {
+	.img {
+		height: 60%;
+		min-height: 300px;
+	}
+	
+	.score {
+		flex-direction: column;
+		
+		height: 15%;
+		min-height: 108px;
+	}
+	
+	.scoreItem {
+		margin-right: 0px;
+		margin-bottom: 8px;
+		
+		font-size: 14px;
+	}
+  
+	.textTitle {
+		font-size: 64px;
+	}
+
+	.textScore {
+		font-size: 32px;
+	}
+	
+	#pop {
+		width: 300px;
+		height: 300px;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.img {
+		min-height: 250px;
+	}
+	
+	.scoreItem {
+		width: 140px;
+		
+		font-size: 13px;
+	}
+	
+	.textTitle {
+		font-size: 56px;
+	}
+	
+	.textScore {
+		font-size: 28px;
+	}
+	
+	#pop {
+		width: 250px;
+		height: 250px;
+	}
+}
+
+@media only screen and (max-width: 325px) {
+	.img {
+		min-height: 200px;
+	}
+	
+	.textTitle {
+		font-size: 48px;
+	}
+	
+	.scoreItem {
+		width: 130px;
+	}
+	
+	#pop {
+		width: 200px;
+		height: 200px;
+	}
+}
