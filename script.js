@@ -50,8 +50,24 @@ function increaseScore(){
 }
 
 // event
-img.addEventListener(downEvent, down);
+img.addEventListener("mousedown", e => {
+	e.preventDefault();
+	down();
+});
     
-img.addEventListener(upEvent, up);
+img.addEventListener("mouseup", e => {
+	e.preventDefault();
+	up();
+});
+
+img.addEventListener("touchstart", e => {
+	e.preventDefault();
+	down();
+});
+    
+img.addEventListener("touchend", e => {
+	e.preventDefault();
+	up();
+});
 
 
