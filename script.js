@@ -115,19 +115,31 @@ img.addEventListener('mousedown', e => {
 	down();
 });
     
-img.addEventListener("mouseup", e => {
+img.addEventListener('mouseup', e => {
 	e.preventDefault();
 	up();
 });
 
-img.addEventListener("touchstart", e => {
+img.addEventListener('touchstart', e => {
 	e.preventDefault();
 	down();
 });
     
-img.addEventListener("touchend", e => {
+img.addEventListener('touchend', e => {
 	e.preventDefault();
 	up();
+});
+
+window.addEventListener('keydown', e => {
+	if (e.keyCode === 13) {
+		down();
+	}
+});
+
+window.addEventListener('keyup', e => {
+	if (e.keyCode === 13) {
+		up();
+	}
 });
 
 window.addEventListener("load", readStorage);
