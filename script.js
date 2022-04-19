@@ -6,6 +6,8 @@ var userScore = 0;
 var totalScore = 3000;
 var audio = new Audio('media/sora_dllm.mp3');
 
+audio.muted = "true";
+
 // system
 var downEvent = (
 	function() {
@@ -30,6 +32,7 @@ function down() {
     increaseScore();
     img.src = 'media/sora_2.png';
 	
+	audio.muted = false;
 	if (!audio.paused) {
         audio.pause();
         audio.currentTime = 0;
