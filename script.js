@@ -112,7 +112,7 @@ function writeStorage() {
 	localStorage.setItem('userScore', userScore);
 }
 
-function clear(){
+function clear() {
 	localStorage.clear();
 	
 	userScore = 0;
@@ -126,6 +126,10 @@ function clear(){
 	img.src = 'media/sora_1.png';
 	
 	return 'Success';
+}
+
+function lastUpdate() {
+	return '4:10 22/4/2022';
 }
 
 // event
