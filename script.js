@@ -124,6 +124,8 @@ function clear(){
 	updateDisplay();
 	
 	img.src = 'media/sora_1.png';
+	
+	return 'Success';
 }
 
 // event
