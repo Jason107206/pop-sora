@@ -47,7 +47,7 @@ function modeToggle() {
 		mode = r - Math.floor(r / 2) * 2;
 		
 		if (mode === 0) {
-			img.src = 'media/sora_2.png';
+			img.src = 'media/sora_1.png';
 			
 			css = document.querySelector('.text > div > *:first-child');
 			css.style.color = 'rgb(255, 163, 183)';
@@ -72,7 +72,7 @@ function modeToggle() {
 		}
 		
 		if (mode === 1) {
-			img.src = 'media/redSora_2.png';
+			img.src = 'media/redSora_1.png';
 			
 			css = document.querySelector('.text > div > *:first-child');
 			css.style.color = 'rgba(247, 92, 98)';
