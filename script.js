@@ -1,9 +1,14 @@
 var img = document.getElementById('img');
 var userScore = 0, mode = 0, initStatus = true, keyStatus = false, css, audio;
-var audio = new Audio('media/sora_dllm.mp3');
+var audio = new Audio('media/sora_dllm.mp3'); 
 
 // function
 function init() {
+	if (new URLSearchParams(window.location.search).has('clear')) {
+		clear();
+		window.location = window.location.href.split("?")[0];
+	}
+	
 	readStorage();
 	modeToggle();
 	initStatus = false;
@@ -112,14 +117,15 @@ function writeStorage() {
 }
 
 function clear() {
-	localStorage.clear();
-	userScore = 0;
-	
-	modeToggle();
-	updateDisplay();
-	
-	img.src = 'media/sora_1.png';
-	return 'Success';
+	if (new URLSearchParams(window.location.search).has('clear')) {
+		localStorage.clear();
+		userScore = 0;
+		
+		modeToggle();
+		updateDisplay();
+		
+		img.src = 'media/sora_1.png';
+	}
 }
 
 function lastUpdate() {
