@@ -1,11 +1,12 @@
 var img = document.getElementById('img');
-var userScore = 0, mode = 0, keyStatus = false, css, audio;
+var userScore = 0, mode = 0, initStatus = true, keyStatus = false, css, audio;
 var audio = new Audio('media/sora_dllm.mp3');
 
 // function
 function init() {
 	readStorage();
 	modeToggle();
+	initStatus = false;
 }
 
 function keyDown() {
@@ -37,10 +38,12 @@ function increaseScore() {
 
 function modeToggle() {
 	var r = Math.floor(userScore / 100);	
-	if (userScore - r * 100 === 0) {
+	if (userScore - r * 100 === 0 || initStatus) {
 		mode = r - Math.floor(r / 2) * 2;
 		
 		if (mode === 0) {
+			img.src = 'media/sora_2.png';
+			
 			css = document.querySelector('.text > div > *:first-child');
 			css.style.color = 'rgb(255, 163, 183)';
 			css.innerHTML = "ZIZI";
@@ -64,6 +67,8 @@ function modeToggle() {
 		}
 		
 		if (mode === 1) {
+			img.src = 'media/redSora_2.png';
+			
 			css = document.querySelector('.text > div > *:first-child');
 			css.style.color = 'rgba(247, 92, 98)';
 			css.innerHTML = "RED";
@@ -118,7 +123,7 @@ function clear() {
 }
 
 function lastUpdate() {
-	return '1:51 3/9/2022';
+	return '2:05 3/9/2022';
 }
 
 // event
